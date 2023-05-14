@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmykkqbovm8g2"]
+
+[ext_resource type="Script" path="res://Game.gd" id="1_bqv07"]
+[ext_resource type="PackedScene" uid="uid://dlxdb5vfircyw" path="res://Map.tscn" id="1_wedak"]
+[ext_resource type="PackedScene" uid="uid://b2ues5axtjn0h" path="res://Player.tscn" id="2_hfv3l"]
+[ext_resource type="PackedScene" uid="uid://ejpuftrgjnp5" path="res://Monster.tscn" id="4_ac6ce"]
+
+[node name="Game" type="Node2D"]
+position = Vector2(-18, -29)
+script = ExtResource("1_bqv07")
+
+[node name="Map" parent="." instance=ExtResource("1_wedak")]
+
+[node name="Player" parent="." instance=ExtResource("2_hfv3l")]
+position = Vector2(69, 26)
+
+[node name="Monster" parent="." instance=ExtResource("4_ac6ce")]
+position = Vector2(201, 55)
+
+[node name="Line2D" type="Line2D" parent="."]
